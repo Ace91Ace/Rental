@@ -1,3 +1,15 @@
+
+
+
+
+<img width="1919" height="1020" alt="Screenshot 2026-01-18 232204" src="https://github.com/user-attachments/assets/a7ca52a1-005f-4ee3-9b4e-0b2965b80279" />
+
+
+
+<img width="1896" height="893" alt="Screenshot 2026-01-19 014844" src="https://github.com/user-attachments/assets/23f33cf3-f3ff-4ef1-b420-b6510fa43575" />
+
+<img width="1916" height="855" alt="Screenshot 2026-01-19 030843" src="https://github.com/user-attachments/assets/99275c44-dbe0-4b27-bdbb-db8cefc909e4" />
+
 # Rental
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
