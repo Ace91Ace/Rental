@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Management</title>
+
+    <!-- Add this inside the <head> tag if not already present -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container-fluid mt-4">
+    <h3 class="page-title mb-4">
+        <i class="fas fa-car me-2"></i>Vehicle Management
+    </h3>
+
+    <div class="row g-4">
+
+        <!-- ================== VEHICLE TABLE ================== -->
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header fw-bold">
+                    <i class="fas fa-list me-2"></i>Vehicle List
+                </div>
+
+                <div class="card-body table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Brand</th>
+                                <th>Model</th>
+                                <th>Year</th>
+                                <th>Color</th>
+                                <th>Daily Rate</th>
+                                <th>Reg No</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    
+
+                            <tr *ngFor="let car of carList">
+                              <td>{{ car.CarId }}</td>
+                              <td>{{ car.Brand }}</td>
+                              <td>{{ car.Model }}</td>
+                              <td>{{ car.Year }}</td>
+                              <td>{{ car.Color }}</td>
+                              <td>{{ car.DailyRate }}</td>
+                              <td>{{ car.RegNo }}</td>
+                              <td>
+                                <button class="btn btn-sm btn-primary me-1">
+                                  <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-sm btn-danger">
+                                  <i class="fas fa-trash"></i>
+                                </button>
+                              </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================== VEHICLE FORM ================== -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header fw-bold">
+                    <i class="fas fa-plus-circle me-2"></i>Add / Update Vehicle
+                </div>
+
+                <div class="card-body">
+                    <form>
+
+                        <div class="mb-3">
+                            <label class="form-label">Brand</label>
+                            <input type="text" [(ngModel)]="newCarObj.brand" class="form-control" placeholder="Brand">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Model</label>
+                            <input type="text" [(ngModel)]="newCarObj.model" class="form-control" placeholder="Model">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Year</label>
+                            <input type="number" [(ngModel)]="newCarObj.year" class="form-control" placeholder="Year">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Color</label>
+                            <input type="text" [(ngModel)]="newCarObj.color" class="form-control" placeholder="Color">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Daily Rate</label>
+                            <input type="number" [(ngModel)]="newCarObj.dailyRate" class="form-control" placeholder="Daily Rate">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Registration Number</label>
+                            <input type="text" [(ngModel)]="newCarObj.regNo" class="form-control" placeholder="Reg No">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Car Image URL</label>
+                            <input type="text" [(ngModel)]="newCarObj.carImage" class="form-control" placeholder="Image URL">
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="button" (click)="onSaveCar()" class="btn btn-success">
+                                <i class="fas fa-save me-2"></i>Save Vehicle
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                <i class="fas fa-rotate-left me-2"></i>Reset
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

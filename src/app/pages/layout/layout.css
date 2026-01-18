@@ -1,0 +1,16 @@
+/* Add or update these styles in your layout.css file to add color and gradient to the navbar */
+
+.navbar {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+}
+
+.navbar-brand, .navbar-nav .nav-link, .navbar-text {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: #ffd700 !important; /* Gold highlight on hover/active */
+    text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
